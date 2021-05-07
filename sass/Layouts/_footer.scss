@@ -1,0 +1,19 @@
+footer {
+    background-color: $background-secondary;
+    color: white; 
+
+    ul {
+        list-style: none;
+       
+        
+        li {
+            display: flex;
+
+            i {
+                padding-right: 10px;
+            }
+            
+        }
+       
+    }
+}
