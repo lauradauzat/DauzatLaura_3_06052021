@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+footer h2 {
+  font-family: "Roboto";
+}
+
+/*COULEURS*/
+.card {
+  border-radius: 20px;
+}
+.card-fonctionnement {
+  background-color: whitesmoke;
+  display: flex;
+  text-align: center;
+}
+.card-fonctionnement * {
+  display: flex;
+  text-align: center;
+  padding: 0.5em;
+}
+.card-fonctionnement__number-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: #9356DC;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+}
+.card-fonctionnement__number-container p {
+  color: white;
+}
+.card-fonctionnement__icon-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.card-fonctionnement__icon-container i {
+  color: #5c5c5c;
+}
+.card-fonctionnement__text-container {
+  width: 100%;
+}
+
+footer {
+  background-color: #434343;
+  color: white;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: flex;
+}
+footer ul li i {
+  padding-right: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+header div {
+  display: flex;
+}
+
+.carroussel {
+  background-color: whitesmoke;
+}
+
+/*# sourceMappingURL=style.css.map */

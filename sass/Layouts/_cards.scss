@@ -2,52 +2,52 @@
 
 .card {
 
-border-radius: 20px;
-
-    &-fonctionnement {
-        background-color: $background-primary;
-        display: flex;
-        text-align: center;
-
-        & * {
+    border-radius: 20px;
+    
+        &-fonctionnement {
+            background-color: $background-primary;
+            display: flex;
+            text-align: center;
+    
+            & * {
+                
+                display: flex;
+                text-align: center;
+                padding: 0.5em;
+            }
+    
+            &__number-container {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                background-color: $colour-primary;
+                border-radius: 15px;
+                width: 30px;
+                height: 30px;
+        
+                p {
+                    color: white;
+                }
+            }
+        
+            &__icon-container {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+        
+                i {
+                    color: darken($background-primary, 60);
+                }
+        
             
-            display: flex;
-            text-align: center;
-            padding: 0.5em;
-        }
-
-        &__number-container {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            background-color: $colour-primary;
-            border-radius: 15px;
-            width: 30px;
-            height: 30px;
-    
-            p {
-                color: white;
+            } 
+            &__text-container {
+                
+                width: 100%;
             }
+        
+        
         }
-    
-        &__icon-container {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-    
-            i {
-                color: darken($background-primary, 60);
-            }
     
         
-        } 
-        &__text-container {
-            
-            width: 100%;
-        }
-    
-    
     }
-
-    
-}
