@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html, body {
+  margin-bottom: 0;
 }
 
 h1 {
@@ -10,18 +16,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  font-weight: 600;
+}
+
 footer h2 {
-  font-family: "Roboto";
+  font-family: "Shrikhand", cursive;
 }
 
 /*COULEURS*/
 .card {
-  border-radius: 20px;
+  border-radius: 30px;
 }
 .card-fonctionnement {
   background-color: whitesmoke;
   display: flex;
   text-align: center;
+  align-items: center;
+  position: relative;
 }
 .card-fonctionnement * {
   display: flex;
@@ -32,15 +44,19 @@ footer h2 {
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
   background-color: #9356DC;
   border-radius: 15px;
   width: 30px;
   height: 30px;
+  position: absolute;
+  left: -10px;
 }
 .card-fonctionnement__number-container p {
   color: white;
 }
 .card-fonctionnement__icon-container {
+  padding-left: 40px;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -52,15 +68,60 @@ footer h2 {
   width: 100%;
 }
 
+.Restaurants {
+  background-color: whitesmoke;
+}
+.Restaurants .cards {
+  border-radius: 25px;
+  width: 90%;
+  margin: 1em;
+}
+.Restaurants .cards .cards_img {
+  position: relative;
+}
+.Restaurants .cards .cards_img .img-nouveau {
+  height: 30px;
+  width: 90px;
+  background-color: #8bd4bc;
+  color: green;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+}
+.Restaurants .cards .cards_img .img-nouveau p {
+  margin: auto;
+}
+.Restaurants .cards .cards_img img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+.Restaurants .cards .cards_text-left {
+  padding-left: 1em;
+  padding-bottom: 0.7em;
+}
+.Restaurants .cards .cards_text-left p {
+  margin-top: 0.5em;
+  padding-top: 0;
+}
+
 footer {
   background-color: #434343;
   color: white;
+  padding-bottom: 2em;
+}
+footer h2 {
+  padding-left: 40px;
+  padding-top: 1em;
 }
 footer ul {
   list-style: none;
 }
 footer ul li {
   display: flex;
+  align-items: center;
+  height: 2em;
 }
 footer ul li i {
   padding-right: 10px;
@@ -71,13 +132,57 @@ header {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  align-items: center;
 }
 header div {
   display: flex;
 }
+header .localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #e8e8e8;
+  padding: 0.5em 0;
+}
+header .localisation * {
+  padding: 0 0.5em 0 0.5em;
+}
+
+.Fonctionnement .card_container {
+  margin: 1em 2em;
+}
+
+section h2 {
+  padding: 1em;
+}
+
+.carroussel button {
+  color: white;
+  background-color: #FF79DA;
+  padding: 1em;
+  border-radius: 25px;
+  border: none;
+}
 
 .carroussel {
   background-color: whitesmoke;
+  padding: 0em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carroussel h2, .carroussel h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+.carroussel h3 {
+  font-weight: 300;
+  font-size: 90%;
+  margin-top: 0;
+}
+.carroussel button {
+  margin-top: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

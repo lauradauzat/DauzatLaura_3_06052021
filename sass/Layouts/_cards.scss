@@ -2,12 +2,14 @@
 
 .card {
 
-    border-radius: 20px;
+    border-radius: 30px;
     
         &-fonctionnement {
             background-color: $background-primary;
             display: flex;
             text-align: center;
+            align-items: center;
+            position: relative;
     
             & * {
                 
@@ -20,10 +22,14 @@
                 display: flex;
                 text-align: center;
                 justify-content: center;
+                align-items: center;
                 background-color: $colour-primary;
                 border-radius: 15px;
                 width: 30px;
                 height: 30px;
+                position: absolute;
+                left: -10px;
+                
         
                 p {
                     color: white;
@@ -31,6 +37,7 @@
             }
         
             &__icon-container {
+                padding-left: 40px;
                 display: flex;
                 text-align: center;
                 justify-content: center;
@@ -50,4 +57,56 @@
         }
     
         
+    }
+
+
+    //* Restaurants *//
+
+    .Restaurants {
+
+        background-color: $background-primary;
+
+        .cards {
+
+     
+            border-radius: 25px;
+            width: 90%;
+            margin: 1em;
+            
+            .cards_img {
+
+                position: relative;
+
+                .img-nouveau {
+                    height: 30px;
+                    width: 90px;
+                    background-color: rgb(139, 212, 188);
+                    color:green;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    display: flex;
+
+                    p {
+                        margin: auto;
+                    }
+                    
+                }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 25px 25px 0 0;
+                }
+            }
+
+            .cards_text-left {
+                padding-left: 1em;
+                padding-bottom: 0.7em;
+
+                p {
+                    margin-top: 0.5em;
+                    padding-top: 0;
+                }
+            }
+        }
     }

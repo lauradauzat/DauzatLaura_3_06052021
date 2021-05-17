@@ -1,13 +1,20 @@
 footer {
     background-color: $background-secondary;
     color: white; 
+    padding-bottom: 2em;
 
+    h2 {
+        padding-left: 40px;
+        padding-top: 1em;
+    }  
     ul {
         list-style: none;
        
         
         li {
             display: flex;
+            align-items: center;
+            height: 2em;
 
             i {
                 padding-right: 10px;
