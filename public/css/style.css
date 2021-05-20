@@ -185,4 +185,13 @@ section h2 {
   margin-top: 2em;
 }
 
+.menu-carroussel {
+  height: 300px;
+  width: 100%;
+}
+.menu-carroussel img {
+  object-fit: cover;
+  height: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
