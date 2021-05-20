@@ -1,7 +1,10 @@
 
 button {
    color: white;
-    background-color: $colour-secondary;
+   background: rgb(156,60,193);
+   background: linear-gradient(0deg, rgba(156,60,193,1) 0%, rgba(241,127,227,1) 100%);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
     padding: 1em;
     border-radius: 25px;
     border: none;
