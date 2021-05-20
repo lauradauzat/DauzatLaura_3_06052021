@@ -8,6 +8,12 @@ html, body {
   margin-bottom: 0;
 }
 
+section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -157,12 +163,13 @@ section h2 {
   padding: 1em;
 }
 
-.carroussel button {
+button {
   color: white;
   background-color: #FF79DA;
   padding: 1em;
   border-radius: 25px;
   border: none;
+  margin: 5% 25%;
 }
 
 .carroussel {
@@ -192,6 +199,28 @@ section h2 {
 .menu-carroussel img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
+}
+
+/*Menu global*/
+.Menu {
+  margin: 10px 20px;
+}
+
+/* Menu title */
+.Menu-category-title {
+  text-transform: uppercase;
+  color: #434343;
+  text-align: left;
+}
+.Menu-category-title h3 {
+  margin-bottom: 0px;
+}
+.Menu-category-title hr {
+  height: 4px;
+  width: 50px;
+  background-color: #99E2D0;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,4 +7,12 @@
 
    html, body {
        margin-bottom: 0;
+
    }
+
+
+section {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
