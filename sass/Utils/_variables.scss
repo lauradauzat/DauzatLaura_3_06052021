@@ -6,3 +6,7 @@ $background-primary: rgb(245, 245, 245);
 $background-secondary: darken($background-primary, 70);
 $background-tertiary: darken($background-primary, 5);
 
+/* BREAKPOINTS */
+$md: 768px;
+$lg: 992px;
+$xl: 1200px; 

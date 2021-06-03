@@ -66,12 +66,15 @@
 
         background-color: $background-primary;
 
+        .restaurant-card-container {
+            margin: 2em;
+        }
+
         .cards {
 
-     
             border-radius: 25px;
-            width: 90%;
-            margin: 1em;
+            //width: 100%;
+            margin-bottom: 2em;
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             
             .cards_img {
@@ -82,7 +85,7 @@
                     height: 30px;
                     width: 90px;
                     background-color: rgb(139, 212, 188);
-                    color:green;
+                    color:rgb(30, 126, 113);
                     position: absolute;
                     top: 15px;
                     right: 15px;
@@ -97,17 +100,42 @@
                     object-fit: cover;
                     width: 100%;
                     border-radius: 25px 25px 0 0;
+                    height: 200px;
                 }
             }
+            
+            .cards_text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
+            }
             .cards_text-left {
                 padding-left: 1em;
-                padding-bottom: 0.7em;
+                padding-bottom: 0em;
+                text-align: left;
+                line-height: 8px;
+                padding-top: 8px;
+                
+
+        
+
 
                 p {
                     margin-top: 0.5em;
                     padding-top: 0;
+           
+
+                    strong {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
                 }
+            }
+
+            .cards_text-right {
+                padding-right: 1em;
+                font-size: xx-large;
             }
         }
     }
@@ -147,3 +175,99 @@
     }
 
     
+
+
+    // Responsive 
+    // Media Querys
+
+    @media (min-width: $md) {
+        body {
+          background-color: red;
+        }
+
+        .Fonctionnement {
+            display: grid;
+            grid-template: 
+            "title title title"
+            "card1 card2 card3 "
+
+        }
+
+        .Fonctionnement {
+            h2 {
+                grid-area: title;
+            }
+
+            .card-1 {
+                grid-area: card1; 
+            }
+
+            .card-2 {
+                grid-area: card2; 
+            }
+
+            .card-3 {
+                grid-area: card3; 
+            }
+
+        }
+
+
+
+        .restaurant-card-container {
+            display: grid; 
+            grid-template: 
+            " c1 c2"
+            "c3 c4"
+            ;
+            grid-gap: 1em;
+
+            .cards {
+                margin: 1em;
+            }
+
+            .rcard-1 {
+                grid-area: c1; 
+            }
+
+            .rcard-2 {
+                grid-area: c2; 
+            }
+
+            .rcard-3 {
+                grid-area: c3; 
+            }
+
+            .rcard-4 {
+                grid-area: c4; 
+            }
+        }        
+       
+
+      }
+
+
+      @media (min-width: $lg) {
+        body {
+          background-color: rgb(17, 167, 42);
+        }
+
+      
+
+
+      }
+
+      @media (min-width: $xl) {
+        body {
+          background-color: rgb(255, 251, 0);
+        }
+
+        .restaurant-card-container {
+            display: grid; 
+            grid-template: 
+            " c1 c2 c3 c4"
+            ;
+        }    
+      }
+
+

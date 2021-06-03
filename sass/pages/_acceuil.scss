@@ -1,12 +1,33 @@
-.Fonctionnement {
+.acceuil {
+    .localisation {
+
+         color: $background-secondary;
+    
+    
+    }
+}
+
+.acceuil .Fonctionnement {
 
     .card_container {
         margin: 1em 2em;
     }
 }
 
-section {
+.acceuil .Fonctionnement, .acceuil .Restaurants{
     h2 {
     padding: 1em;
+    text-align: left;
+    margin-bottom: 0;
+
     }
+}
+
+.acceuil .Fonctionnement {
+    align-items: stretch;
+}
+
+.acceuil .Restaurants {
+    padding-bottom: 2em;
+    align-items: stretch;
 }

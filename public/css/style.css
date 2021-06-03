@@ -12,6 +12,7 @@ section {
   display: flex;
   text-align: center;
   flex-direction: column;
+  align-items: stretch;
 }
 
 h1 {
@@ -30,7 +31,21 @@ footer h2, .menu h2 {
   font-family: "Shrikhand", cursive;
 }
 
+button {
+  font-size: medium;
+}
+
+.cards p {
+  font-size: larger;
+  font-weight: 300;
+}
+.cards .img-nouveau p {
+  font-size: 85%;
+  font-weight: 500;
+}
+
 /*COULEURS*/
+/* BREAKPOINTS */
 .card {
   border-radius: 30px;
 }
@@ -77,10 +92,12 @@ footer h2, .menu h2 {
 .Restaurants {
   background-color: whitesmoke;
 }
+.Restaurants .restaurant-card-container {
+  margin: 2em;
+}
 .Restaurants .cards {
   border-radius: 25px;
-  width: 90%;
-  margin: 1em;
+  margin-bottom: 2em;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .Restaurants .cards .cards_img {
@@ -90,7 +107,7 @@ footer h2, .menu h2 {
   height: 30px;
   width: 90px;
   background-color: #8bd4bc;
-  color: green;
+  color: #1e7e71;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -103,14 +120,31 @@ footer h2, .menu h2 {
   object-fit: cover;
   width: 100%;
   border-radius: 25px 25px 0 0;
+  height: 200px;
+}
+.Restaurants .cards .cards_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .Restaurants .cards .cards_text-left {
   padding-left: 1em;
-  padding-bottom: 0.7em;
+  padding-bottom: 0em;
+  text-align: left;
+  line-height: 8px;
+  padding-top: 8px;
 }
 .Restaurants .cards .cards_text-left p {
   margin-top: 0.5em;
   padding-top: 0;
+}
+.Restaurants .cards .cards_text-left p strong {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.Restaurants .cards .cards_text-right {
+  padding-right: 1em;
+  font-size: xx-large;
 }
 
 .menu .cards {
@@ -139,18 +173,78 @@ footer h2, .menu h2 {
   margin: 5px;
 }
 
+@media (min-width: 768px) {
+  body {
+    background-color: red;
+  }
+
+  .Fonctionnement {
+    display: grid;
+    grid-template: "title title title" "card1 card2 card3 ";
+  }
+
+  .Fonctionnement h2 {
+    grid-area: title;
+  }
+  .Fonctionnement .card-1 {
+    grid-area: card1;
+  }
+  .Fonctionnement .card-2 {
+    grid-area: card2;
+  }
+  .Fonctionnement .card-3 {
+    grid-area: card3;
+  }
+
+  .restaurant-card-container {
+    display: grid;
+    grid-template: " c1 c2" "c3 c4";
+    grid-gap: 1em;
+  }
+  .restaurant-card-container .cards {
+    margin: 1em;
+  }
+  .restaurant-card-container .rcard-1 {
+    grid-area: c1;
+  }
+  .restaurant-card-container .rcard-2 {
+    grid-area: c2;
+  }
+  .restaurant-card-container .rcard-3 {
+    grid-area: c3;
+  }
+  .restaurant-card-container .rcard-4 {
+    grid-area: c4;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background-color: #11a72a;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: #fffb00;
+  }
+
+  .restaurant-card-container {
+    display: grid;
+    grid-template: " c1 c2 c3 c4";
+  }
+}
 footer {
   background-color: #434343;
   color: white;
   padding-bottom: 2em;
+  padding-left: 2em;
 }
 footer h2 {
-  padding-left: 40px;
   padding-top: 1em;
   margin-top: 0;
 }
 footer ul {
   list-style: none;
+  padding-left: 0em;
 }
 footer ul li {
   display: flex;
@@ -183,12 +277,27 @@ header .localisation * {
   padding: 0 0.5em 0 0.5em;
 }
 
-.Fonctionnement .card_container {
+.acceuil .localisation {
+  color: #434343;
+}
+
+.acceuil .Fonctionnement .card_container {
   margin: 1em 2em;
 }
 
-section h2 {
+.acceuil .Fonctionnement h2, .acceuil .Restaurants h2 {
   padding: 1em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.acceuil .Fonctionnement {
+  align-items: stretch;
+}
+
+.acceuil .Restaurants {
+  padding-bottom: 2em;
+  align-items: stretch;
 }
 
 button {
@@ -207,19 +316,23 @@ button {
   padding: 0em 2em 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 .carroussel h2, .carroussel h3 {
   text-align: center;
   margin-bottom: 0;
 }
 .carroussel h3 {
-  font-weight: 300;
-  font-size: 90%;
+  font-weight: 200;
+  font-size: 110%;
   margin-top: 0;
 }
 .carroussel button {
   margin-top: 2em;
+  align-items: stretch;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: 1em;
 }
 
 .menu-carroussel {
@@ -233,11 +346,38 @@ button {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .carroussel {
+    display: grid;
+    grid-template: "h2 button" "h3 button";
+  }
+  .carroussel h2 {
+    grid-area: h2;
+    margin-left: 0;
+    text-align: left;
+  }
+  .carroussel h3 {
+    grid-area: h3;
+    text-align: left;
+  }
+  .carroussel button {
+    grid-area: button;
+  }
+
+  .menu-carroussel {
+    display: none;
+  }
+}
 /*Menu global*/
 .menu {
-  padding: 10px 20px;
+  padding: 10px 0px;
   background-color: whitesmoke;
   border-radius: 30px 30px 0 0;
+}
+
+.menu-page > .menu > * {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 /*Restaurant name*/
@@ -260,6 +400,22 @@ button {
   background-color: #99E2D0;
   border: none;
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .menu-page {
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+
+  .menu-page > .menu, .menu-carroussel {
+    width: 70%;
+  }
+
+  .menu {
+    background-color: whitesmoke;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
