@@ -5,6 +5,8 @@ header {
     flex-direction: column;
     align-items: center;
 
+ 
+
     div {
         display: flex;
         
@@ -26,4 +28,16 @@ header {
         
     }
 
+}
+
+.menu > header {
+    display: flex; 
+    flex-direction: row;
+
+    .arrow-left-container {
+       position: absolute;
+       left: 2em;
+       display: flex;
+
+    }
 }

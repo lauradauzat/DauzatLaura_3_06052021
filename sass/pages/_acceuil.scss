@@ -14,7 +14,7 @@
     }
 }
 
-.acceuil .Fonctionnement, .acceuil .Restaurants{
+.acceuil {
     h2 {
     padding: 1em;
     text-align: left;
@@ -31,3 +31,9 @@
     padding-bottom: 2em;
     align-items: stretch;
 }
+
+
+@media (min-width: 768px) {
+    .Fonctionnement > .h2, .Restaurants > .h2 {
+    text-align: center;       }
+ }

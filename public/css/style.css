@@ -35,6 +35,9 @@ button {
   font-size: medium;
 }
 
+.cards h4 {
+  font-size: 1em;
+}
 .cards p {
   font-size: larger;
   font-weight: 300;
@@ -59,7 +62,7 @@ button {
 .card-fonctionnement * {
   display: flex;
   text-align: center;
-  padding: 0.5em;
+  padding: 2.5%;
 }
 .card-fonctionnement__number-container {
   display: flex;
@@ -89,8 +92,20 @@ button {
   width: 100%;
 }
 
+.card-fonctionnement:hover {
+  background-color: #f5ebff;
+  cursor: pointer;
+}
+.card-fonctionnement:hover i {
+  color: #9356DC;
+}
+
 .Restaurants {
   background-color: whitesmoke;
+}
+.Restaurants a {
+  text-decoration: none;
+  color: #2d2d2d;
 }
 .Restaurants .restaurant-card-container {
   margin: 2em;
@@ -146,6 +161,24 @@ button {
   padding-right: 1em;
   font-size: xx-large;
 }
+.Restaurants .cards .cards_text-right .filled {
+  display: none;
+  background: #CF70C5;
+  background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Restaurants .cards .cards_text-right .border {
+  display: block;
+}
+.Restaurants .cards .cards_text-right:hover .filled {
+  display: block;
+}
+.Restaurants .cards .cards_text-right:hover .border {
+  display: none;
+}
 
 .menu .cards {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -156,28 +189,52 @@ button {
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  padding: 10px;
   margin-bottom: 15px;
   border-radius: 15px;
 }
+.card-menu h4 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.card-menu p {
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.card-menu h4, .card-menu p {
+  margin: 5px;
+}
 .card-menu__right {
   display: flex;
+  align-items: stretch;
+}
+.card-menu__right .price-container {
+  display: flex;
   align-items: flex-end;
+  margin-right: 10px;
+}
+.card-menu__right .check-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  background-color: #8bd4bc;
+  border-radius: 0 15px 15px 0;
+  color: white;
+  font-size: 20px;
+  margin: 0;
 }
 .card-menu__left {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
-.card-menu h4, .card-menu p {
-  margin: 5px;
+  justify-content: flex-start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
-  body {
-    background-color: red;
-  }
-
   .Fonctionnement {
     display: grid;
     grid-template: "title title title" "card1 card2 card3 ";
@@ -217,16 +274,7 @@ button {
     grid-area: c4;
   }
 }
-@media (min-width: 992px) {
-  body {
-    background-color: #11a72a;
-  }
-}
 @media (min-width: 1200px) {
-  body {
-    background-color: #fffb00;
-  }
-
   .restaurant-card-container {
     display: grid;
     grid-template: " c1 c2 c3 c4";
@@ -236,7 +284,6 @@ footer {
   background-color: #434343;
   color: white;
   padding-bottom: 2em;
-  padding-left: 2em;
 }
 footer h2 {
   padding-top: 1em;
@@ -250,9 +297,14 @@ footer ul li {
   display: flex;
   align-items: center;
   height: 2em;
+  padding-left: 2em;
 }
 footer ul li i {
   padding-right: 10px;
+}
+
+.menu footer h2 {
+  padding-left: 32px;
 }
 
 header {
@@ -277,6 +329,16 @@ header .localisation * {
   padding: 0 0.5em 0 0.5em;
 }
 
+.menu > header {
+  display: flex;
+  flex-direction: row;
+}
+.menu > header .arrow-left-container {
+  position: absolute;
+  left: 2em;
+  display: flex;
+}
+
 .acceuil .localisation {
   color: #434343;
 }
@@ -285,7 +347,7 @@ header .localisation * {
   margin: 1em 2em;
 }
 
-.acceuil .Fonctionnement h2, .acceuil .Restaurants h2 {
+.acceuil h2 {
   padding: 1em;
   text-align: left;
   margin-bottom: 0;
@@ -300,6 +362,11 @@ header .localisation * {
   align-items: stretch;
 }
 
+@media (min-width: 768px) {
+  .Fonctionnement > .h2, .Restaurants > .h2 {
+    text-align: center;
+  }
+}
 button {
   color: white;
   background: #9c3cc1;
@@ -308,7 +375,14 @@ button {
   padding: 1em;
   border-radius: 25px;
   border: none;
-  margin: 5% 25%;
+  margin: 0 auto;
+}
+
+.carroussel button {
+  margin-top: 2em;
+  align-items: center;
+  padding: 1em;
+  width: 250px;
 }
 
 .carroussel {
@@ -327,13 +401,6 @@ button {
   font-size: 110%;
   margin-top: 0;
 }
-.carroussel button {
-  margin-top: 2em;
-  align-items: stretch;
-  margin-left: 3em;
-  margin-right: 3em;
-  padding: 1em;
-}
 
 .menu-carroussel {
   height: 300px;
@@ -349,19 +416,19 @@ button {
 @media (min-width: 768px) {
   .carroussel {
     display: grid;
-    grid-template: "h2 button" "h3 button";
+    grid-template: "h2" "h3" "button";
   }
   .carroussel h2 {
     grid-area: h2;
-    margin-left: 0;
-    text-align: left;
   }
   .carroussel h3 {
     grid-area: h3;
-    text-align: left;
   }
   .carroussel button {
     grid-area: button;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2em;
   }
 
   .menu-carroussel {
@@ -373,6 +440,8 @@ button {
   padding: 10px 0px;
   background-color: whitesmoke;
   border-radius: 30px 30px 0 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .menu-page > .menu > * {
@@ -381,8 +450,13 @@ button {
 }
 
 /*Restaurant name*/
-.menu > h2 {
-  text-align: left;
+.menu .restau_name-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .restau_name-heart i {
+  font-size: 30px;
 }
 
 /* Menu titles */
@@ -406,15 +480,23 @@ button {
   .menu-page {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .menu-page > .menu, .menu-carroussel {
     width: 70%;
+    background-color: rgba(245, 245, 245, 0.808);
+    border-radius: 15px;
+    margin: 2em 0;
   }
 
-  .menu {
-    background-color: whitesmoke;
+  .Fonctionnement h2, .Restaurants h2 {
+    text-align: center;
   }
 }
 

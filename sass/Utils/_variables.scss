@@ -3,8 +3,10 @@ $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0; 
 $background-primary: rgb(245, 245, 245);
+$background-primary-transparent: rgba(245, 245, 245, 0.808);
 $background-secondary: darken($background-primary, 70);
 $background-tertiary: darken($background-primary, 5);
+$background-purple: #f5ebff; 
 
 /* BREAKPOINTS */
 $md: 768px;

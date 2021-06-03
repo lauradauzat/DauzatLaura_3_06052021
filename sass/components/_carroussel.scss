@@ -17,13 +17,6 @@
         margin-top: 0;
     }
 
-    button {
-        margin-top: 2em;
-        align-items: stretch;
-        margin-left: 3em;
-        margin-right: 3em;
-        padding: 1em;
-    }
 
     
 
@@ -52,23 +45,28 @@
        .carroussel {
             display: grid;
             grid-template: 
-            "h2 button"
-            "h3 button"; 
+            "h2"
+            "h3"
+            "button"; 
 
             h2 {
                 grid-area: h2; 
-                margin-left: 0;
-                text-align: left;
+              
+                
             }
 
             h3 {
                 grid-area: h3; 
-                text-align: left;
+                
                 
             }
 
             button {
                 grid-area: button;
+                justify-content: center;
+                margin: 0 auto;
+                margin-top: 2em;
+
             }
        }
 

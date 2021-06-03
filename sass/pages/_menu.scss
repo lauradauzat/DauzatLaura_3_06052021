@@ -4,6 +4,8 @@
     padding: 10px 0px;
     background-color: $background-primary;
     border-radius: 30px 30px 0 0 ;
+    margin-top: 0;
+    padding-top: 0;
 
   
 }
@@ -15,9 +17,18 @@
 }
 /*Restaurant name*/
 
-.menu > h2 {
-    text-align: left;
+.menu .restau_name-heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+        font-size: 30px;
+    }
+    
 }
+
+
 
 /* Menu titles */
 
@@ -51,15 +62,38 @@
         .menu-page {
             display: flex;
             align-items: center;
-            background-color: white;
-        }
-        .menu-page > .menu, .menu-carroussel {
-            width: 70%; 
+            background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+
         }
 
-        .menu {
-            background-color: $background-primary;
-        } 
+
+        .menu-page > .menu, .menu-carroussel {
+            width: 70%; 
+            background-color: $background-primary-transparent;
+            border-radius: 15px;
+            margin: 2em 0; 
+        }
+
+      
+
+        .Fonctionnement, .Restaurants {
+
+            h2 {
+                text-align: center;
+            }
+        
+        
+        }
+        
+        
 
 
     }

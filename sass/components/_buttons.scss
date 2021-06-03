@@ -8,10 +8,20 @@ button {
     padding: 1em;
     border-radius: 25px;
     border: none;
-    margin: 5% 25%;
+    margin: 0 auto;
 
 } 
 
+.carroussel {
+
+   button {
+      margin-top: 2em;
+      align-items: center;
+      padding: 1em;
+      width: 250px;
+  }
+
+}
 
    // Responsive 
     // Media Querys
