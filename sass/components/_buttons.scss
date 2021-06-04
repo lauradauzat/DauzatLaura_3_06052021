@@ -4,11 +4,24 @@ button {
    background: rgb(156,60,193);
    background: linear-gradient(0deg, rgba(156,60,193,1) 0%, rgba(241,127,227,1) 100%);
    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   transition: transform 400ms;
+   transform: scale(1);
+   transition-property: transform;
 
     padding: 1em;
     border-radius: 25px;
     border: none;
     margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+   &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.267), 0 10px 6px rgba(0, 0, 0, 0.281);
+      transform: scale(1.01);
+   } 
 
 } 
 
@@ -19,6 +32,7 @@ button {
       align-items: center;
       padding: 1em;
       width: 250px;
+      
   }
 
 }

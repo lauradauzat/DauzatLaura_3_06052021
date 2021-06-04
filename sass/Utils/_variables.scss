@@ -3,7 +3,7 @@ $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0; 
 $background-primary: rgb(245, 245, 245);
-$background-primary-transparent: rgba(245, 245, 245, 0.808);
+$background-primary-transparent: rgba(245, 245, 245, 0.701);
 $background-secondary: darken($background-primary, 70);
 $background-tertiary: darken($background-primary, 5);
 $background-purple: #f5ebff; 
@@ -12,3 +12,10 @@ $background-purple: #f5ebff;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px; 
+
+/*ANIMATION*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

@@ -63,7 +63,7 @@
             display: flex;
             align-items: center;
             background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-
+            
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -80,6 +80,8 @@
             background-color: $background-primary-transparent;
             border-radius: 15px;
             margin: 2em 0; 
+            backdrop-filter: blur(6px);
+
         }
 
       

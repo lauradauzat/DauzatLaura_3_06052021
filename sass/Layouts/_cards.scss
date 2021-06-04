@@ -93,8 +93,16 @@
             border-radius: 25px;
             //width: 100%;
             margin-bottom: 2em;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-            
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.103), 0 6px 6px rgba(0, 0, 0, 0.151);
+            transform: scale(1);
+            transition: all 200ms;
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
+                
+            }
+
+
             .cards_img {
 
                 position: relative;
@@ -191,7 +199,15 @@
         .cards {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
+
+        @for $i from 1 to 10 {
+            .card-menu:nth-child(#{$i}) 
+            { animation-delay: $i * 0.5s; }
+        }
     }
+
+   
+
     .card-menu {
         display: flex;
         flex-direction: row;
@@ -199,6 +215,19 @@
         background-color: white;
         margin-bottom: 15px;
         border-radius: 15px;
+        animation: fadein 3s;
+        transform: scale(1);
+        transition: all 200ms;
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
+
+           
+        }
+
+     
+        
+        
 
         h4 {
             padding-top: 10px;
@@ -249,6 +278,7 @@
             text-overflow: ellipsis;
             overflow: hidden; 
             white-space: nowrap;
+            width: 300px;
 
         }
 
@@ -263,9 +293,7 @@
     // Media Querys
 
     @media (min-width: $md) {
-        body {
-        //   background-color: red;
-        }
+       
 
         .Fonctionnement {
             display: grid;

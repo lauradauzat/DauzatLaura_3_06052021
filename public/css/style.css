@@ -49,6 +49,15 @@ button {
 
 /*COULEURS*/
 /* BREAKPOINTS */
+/*ANIMATION*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .card {
   border-radius: 30px;
 }
@@ -113,7 +122,13 @@ button {
 .Restaurants .cards {
   border-radius: 25px;
   margin-bottom: 2em;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.103), 0 6px 6px rgba(0, 0, 0, 0.151);
+  transform: scale(1);
+  transition: all 200ms;
+}
+.Restaurants .cards:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
 }
 .Restaurants .cards .cards_img {
   position: relative;
@@ -183,6 +198,33 @@ button {
 .menu .cards {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+.menu .card-menu:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.menu .card-menu:nth-child(2) {
+  animation-delay: 1s;
+}
+.menu .card-menu:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.menu .card-menu:nth-child(4) {
+  animation-delay: 2s;
+}
+.menu .card-menu:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.menu .card-menu:nth-child(6) {
+  animation-delay: 3s;
+}
+.menu .card-menu:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.menu .card-menu:nth-child(8) {
+  animation-delay: 4s;
+}
+.menu .card-menu:nth-child(9) {
+  animation-delay: 4.5s;
+}
 
 .card-menu {
   display: flex;
@@ -191,6 +233,13 @@ button {
   background-color: white;
   margin-bottom: 15px;
   border-radius: 15px;
+  animation: fadein 3s;
+  transform: scale(1);
+  transition: all 200ms;
+}
+.card-menu:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
 }
 .card-menu h4 {
   padding-top: 10px;
@@ -232,6 +281,7 @@ button {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 300px;
 }
 
 @media (min-width: 768px) {
@@ -372,10 +422,21 @@ button {
   background: #9c3cc1;
   background: linear-gradient(0deg, #9c3cc1 0%, #f17fe3 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: transform 400ms;
+  transform: scale(1);
+  transition-property: transform;
   padding: 1em;
   border-radius: 25px;
   border: none;
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.267), 0 10px 6px rgba(0, 0, 0, 0.281);
+  transform: scale(1.01);
 }
 
 .carroussel button {
@@ -490,9 +551,10 @@ button {
 
   .menu-page > .menu, .menu-carroussel {
     width: 70%;
-    background-color: rgba(245, 245, 245, 0.808);
+    background-color: rgba(245, 245, 245, 0.701);
     border-radius: 15px;
     margin: 2em 0;
+    backdrop-filter: blur(6px);
   }
 
   .Fonctionnement h2, .Restaurants h2 {
