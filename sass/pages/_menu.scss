@@ -94,8 +94,39 @@
         
         
         }
+       
+        .restau_name-heart {
+
+            .filled  {
+                display: none;
+                background: #CF70C5;
+                background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+                background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+                background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+    
+            .border {
+                display: block;
+            }
+    
+            &:hover {
+               
+                cursor: pointer;
+                .filled {
+                    display: block;
+                    animation: fadein 1s; 
+                }
+    
+                .border {
         
-        
+                    display: none;
+                }
+            }   
+
+        }
+
 
 
     }

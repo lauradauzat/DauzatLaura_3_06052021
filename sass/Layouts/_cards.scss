@@ -183,9 +183,11 @@
                    
                     .filled {
                         display: block;
+                        animation: fadein 1s; 
                     }
 
                     .border {
+            
                         display: none;
                     }
                 }
@@ -202,30 +204,45 @@
 
         @for $i from 1 to 10 {
             .card-menu:nth-child(#{$i}) 
-            { animation-delay: $i * 0.5s; }
+            { animation-delay: $i * 100ms; }
         }
     }
 
-   
 
     .card-menu {
+        animation: fadein 3s backwards;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: white;
         margin-bottom: 15px;
         border-radius: 15px;
-        animation: fadein 3s;
+        
+        
         transform: scale(1);
-        transition: all 200ms;
+        transition: transform 200ms;
         &:hover {
             transform: scale(1.01);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
+            cursor : pointer;
 
+            .check-container {
+                
+                opacity: 100%;
+                width: 60px;
+
+                i {
+                    
+                    transform: rotate(0turn);
+               
+                }
+             
+            }
            
         }
 
-     
+
+       
         
         
 
@@ -260,25 +277,40 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 60px;
+                width: 0px;
+                opacity: 0%;
                 background-color:rgb(139, 212, 188);
                 border-radius: 0 15px 15px 0;
-                color: white;
+                color: rgb(255, 255, 255);
                 font-size: 20px;
                 margin: 0;
+                transition: all 330ms ease-in-out;
+
+                i {
+                    transform: rotate(-1turn);
+                    transition: transform 800ms ease-in-out;
+                }
+                
             }
             
         }
 
         &__left {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-            text-overflow: ellipsis;
+            // display: flex;
+            // align-items: flex-start;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            
             overflow: hidden; 
-            white-space: nowrap;
-            width: 300px;
+            text-align: left;
+
+            h4, p {
+                // display: inline-block;
+                max-width: 300px; 
+                white-space: nowrap; 
+                overflow: hidden; 
+                text-overflow: ellipsis;
+            }
 
         }
 

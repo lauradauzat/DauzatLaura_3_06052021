@@ -58,6 +58,18 @@ button {
     opacity: 1;
   }
 }
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .card {
   border-radius: 30px;
 }
@@ -190,6 +202,7 @@ button {
 }
 .Restaurants .cards .cards_text-right:hover .filled {
   display: block;
+  animation: fadein 1s;
 }
 .Restaurants .cards .cards_text-right:hover .border {
   display: none;
@@ -199,47 +212,55 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .menu .card-menu:nth-child(1) {
-  animation-delay: 0.5s;
+  animation-delay: 100ms;
 }
 .menu .card-menu:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 200ms;
 }
 .menu .card-menu:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 300ms;
 }
 .menu .card-menu:nth-child(4) {
-  animation-delay: 2s;
+  animation-delay: 400ms;
 }
 .menu .card-menu:nth-child(5) {
-  animation-delay: 2.5s;
+  animation-delay: 500ms;
 }
 .menu .card-menu:nth-child(6) {
-  animation-delay: 3s;
+  animation-delay: 600ms;
 }
 .menu .card-menu:nth-child(7) {
-  animation-delay: 3.5s;
+  animation-delay: 700ms;
 }
 .menu .card-menu:nth-child(8) {
-  animation-delay: 4s;
+  animation-delay: 800ms;
 }
 .menu .card-menu:nth-child(9) {
-  animation-delay: 4.5s;
+  animation-delay: 900ms;
 }
 
 .card-menu {
+  animation: fadein 3s backwards;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   margin-bottom: 15px;
   border-radius: 15px;
-  animation: fadein 3s;
   transform: scale(1);
-  transition: all 200ms;
+  transition: transform 200ms;
 }
 .card-menu:hover {
   transform: scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144), 0 6px 6px rgba(0, 0, 0, 0.199);
+  cursor: pointer;
+}
+.card-menu:hover .check-container {
+  opacity: 100%;
+  width: 60px;
+}
+.card-menu:hover .check-container i {
+  transform: rotate(0turn);
 }
 .card-menu h4 {
   padding-top: 10px;
@@ -266,22 +287,28 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
+  width: 0px;
+  opacity: 0%;
   background-color: #8bd4bc;
   border-radius: 0 15px 15px 0;
   color: white;
   font-size: 20px;
   margin: 0;
+  transition: all 330ms ease-in-out;
+}
+.card-menu__right .check-container i {
+  transform: rotate(-1turn);
+  transition: transform 800ms ease-in-out;
 }
 .card-menu__left {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-align: left;
+}
+.card-menu__left h4, .card-menu__left p {
+  max-width: 300px;
   white-space: nowrap;
-  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) {
@@ -387,6 +414,18 @@ header .localisation * {
   position: absolute;
   left: 2em;
   display: flex;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #9356DC;
+  animation: fadeout 4s forwards;
+  z-index: 1000;
+  visibility: hidden;
 }
 
 .acceuil .localisation {
@@ -559,6 +598,29 @@ button:hover {
 
   .Fonctionnement h2, .Restaurants h2 {
     text-align: center;
+  }
+
+  .restau_name-heart .filled {
+    display: none;
+    background: #CF70C5;
+    background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+    background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+    background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .restau_name-heart .border {
+    display: block;
+  }
+  .restau_name-heart:hover {
+    cursor: pointer;
+  }
+  .restau_name-heart:hover .filled {
+    display: block;
+    animation: fadein 1s;
+  }
+  .restau_name-heart:hover .border {
+    display: none;
   }
 }
 

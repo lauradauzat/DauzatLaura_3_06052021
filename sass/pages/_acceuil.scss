@@ -1,3 +1,18 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0; 
+    left:0;
+    background-color: $colour-primary;
+    animation: fadeout 4s forwards; 
+    z-index: 1000; 
+    visibility: hidden; 
+  
+  
+    
+}
+
 .acceuil {
     .localisation {
 
