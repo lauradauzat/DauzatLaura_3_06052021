@@ -24,9 +24,9 @@
 
     i {
         font-size: 30px;
+
+   
     }
-
-
 
     .filled  {
             display: none;
@@ -38,24 +38,30 @@
             -webkit-text-fill-color: transparent;
      }
 
-     .border {
+    .border {
+        display: block;
+    }
+        
+    .heart-container:hover {
+        
+        cursor: pointer;
+        .filled {
             display: block;
+            animation: fadein 1s; 
+        }
+    
+        .border {
+    
+            display: none;
         }
         
-
-        &:hover {
-           
-            cursor: pointer;
-            .filled {
-                display: block;
-                animation: fadein 1s; 
-            }
-
-            .border {
+    }
     
-                display: none;
-            }
-        }   
+    
+    
+    
+    
+    
 
     
     

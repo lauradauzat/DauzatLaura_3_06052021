@@ -107,6 +107,7 @@
             .cards_img {
 
                 position: relative;
+                width: 100%;
 
                 .img-nouveau {
                     height: 30px;
@@ -331,9 +332,10 @@
 
         .Fonctionnement {
             display: grid;
+           
             grid-template: 
             "title title title"
-            "card1 card2 card3 "
+            "card1 card2 card3"
 
         }
 
@@ -360,9 +362,10 @@
 
         .restaurant-card-container {
             display: grid; 
+            grid-template-columns: 1fr 1fr;
             grid-template: 
-            " c1 c2"
-            "c3 c4"
+            "c1 c2" 1fr 1fr
+            "c3 c4" 1fr 1fr
             ;
             grid-gap: 1em;
 
@@ -388,30 +391,21 @@
         }        
        
 
-      }
+    }
 
 
-      @media (min-width: $lg) {
-        body {
-        //   background-color: rgb(17, 167, 42);
-        }
-
-      
-
-
-      }
-
-      @media (min-width: $xl) {
-        body {
-        //   background-color: rgb(255, 251, 0);
-        }
+    @media (min-width: $xl) {
+       
 
         .restaurant-card-container {
             display: grid; 
             grid-template: 
-            " c1 c2 c3 c4"
+            "c1 c2 c3 c4" 1fr 1fr 1fr 1fr
             ;
         }    
-      }
+    }
+
+
+    
 
 

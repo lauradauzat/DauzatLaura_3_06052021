@@ -5,7 +5,7 @@
     top: 0; 
     left:0;
     background-color: $colour-primary;
-    animation: fadeout 1s forwards; 
+    animation: fadeout 3s forwards; 
     z-index: 1000; 
     visibility: hidden; 
     display: flex;
@@ -16,7 +16,7 @@
            color: white;
            font-size: 50px;
            opacity: 90%;
-           animation: turn 2s alternate-reverse ease-out infinite; 
+           animation: turn 3s alternate-reverse ease-out infinite; 
         }
   
     
