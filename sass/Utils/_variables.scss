@@ -20,12 +20,27 @@ $xl: 1200px;
     to   { opacity: 1; }
 }
 
+@keyframes fadeupin {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+     }
+    to   { opacity: 1; }
+}
+
 @keyframes fadeout {
     0% {opacity: 1;
         visibility: visible; }
-    65% {opacity: 1; }
+    90% {opacity: 1; }
     100% {
         opacity: 0;
     }
 }
 
+@keyframes turn {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(540deg);
+    }
+}

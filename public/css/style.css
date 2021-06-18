@@ -58,16 +58,33 @@ button {
     opacity: 1;
   }
 }
+@keyframes fadeupin {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeout {
   0% {
     opacity: 1;
     visibility: visible;
   }
-  65% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(540deg);
   }
 }
 .card {
@@ -212,35 +229,125 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .menu .card-menu:nth-child(1) {
-  animation-delay: 100ms;
-}
-.menu .card-menu:nth-child(2) {
   animation-delay: 200ms;
 }
-.menu .card-menu:nth-child(3) {
-  animation-delay: 300ms;
-}
-.menu .card-menu:nth-child(4) {
+.menu .card-menu:nth-child(2) {
   animation-delay: 400ms;
 }
-.menu .card-menu:nth-child(5) {
-  animation-delay: 500ms;
-}
-.menu .card-menu:nth-child(6) {
+.menu .card-menu:nth-child(3) {
   animation-delay: 600ms;
 }
-.menu .card-menu:nth-child(7) {
-  animation-delay: 700ms;
-}
-.menu .card-menu:nth-child(8) {
+.menu .card-menu:nth-child(4) {
   animation-delay: 800ms;
 }
+.menu .card-menu:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.menu .card-menu:nth-child(6) {
+  animation-delay: 1200ms;
+}
+.menu .card-menu:nth-child(7) {
+  animation-delay: 1400ms;
+}
+.menu .card-menu:nth-child(8) {
+  animation-delay: 1600ms;
+}
 .menu .card-menu:nth-child(9) {
-  animation-delay: 900ms;
+  animation-delay: 1800ms;
+}
+.menu .card-menu:nth-child(10) {
+  animation-delay: 2000ms;
+}
+.menu .card-menu:nth-child(11) {
+  animation-delay: 2200ms;
+}
+.menu .card-menu:nth-child(12) {
+  animation-delay: 2400ms;
+}
+.menu .card-menu:nth-child(13) {
+  animation-delay: 2600ms;
+}
+.menu .card-menu:nth-child(14) {
+  animation-delay: 2800ms;
+}
+.menu .card-menu:nth-child(15) {
+  animation-delay: 3000ms;
+}
+.menu .card-menu:nth-child(16) {
+  animation-delay: 3200ms;
+}
+.menu .card-menu:nth-child(17) {
+  animation-delay: 3400ms;
+}
+.menu .card-menu:nth-child(18) {
+  animation-delay: 3600ms;
+}
+.menu .card-menu:nth-child(19) {
+  animation-delay: 3800ms;
+}
+.menu .card-menu:nth-child(20) {
+  animation-delay: 4000ms;
+}
+.menu .card-menu:nth-child(21) {
+  animation-delay: 4200ms;
+}
+.menu .card-menu:nth-child(22) {
+  animation-delay: 4400ms;
+}
+.menu .card-menu:nth-child(23) {
+  animation-delay: 4600ms;
+}
+.menu .card-menu:nth-child(24) {
+  animation-delay: 4800ms;
+}
+.menu .card-menu:nth-child(25) {
+  animation-delay: 5000ms;
+}
+.menu .card-menu:nth-child(26) {
+  animation-delay: 5200ms;
+}
+.menu .card-menu:nth-child(27) {
+  animation-delay: 5400ms;
+}
+.menu .card-menu:nth-child(28) {
+  animation-delay: 5600ms;
+}
+.menu .card-menu:nth-child(29) {
+  animation-delay: 5800ms;
+}
+.menu .card-menu:nth-child(30) {
+  animation-delay: 6000ms;
+}
+.menu .card-menu:nth-child(31) {
+  animation-delay: 6200ms;
+}
+.menu .card-menu:nth-child(32) {
+  animation-delay: 6400ms;
+}
+.menu .card-menu:nth-child(33) {
+  animation-delay: 6600ms;
+}
+.menu .card-menu:nth-child(34) {
+  animation-delay: 6800ms;
+}
+.menu .card-menu:nth-child(35) {
+  animation-delay: 7000ms;
+}
+.menu .card-menu:nth-child(36) {
+  animation-delay: 7200ms;
+}
+.menu .card-menu:nth-child(37) {
+  animation-delay: 7400ms;
+}
+.menu .card-menu:nth-child(38) {
+  animation-delay: 7600ms;
+}
+.menu .card-menu:nth-child(39) {
+  animation-delay: 7800ms;
 }
 
 .card-menu {
-  animation: fadein 3s backwards;
+  animation: fadeupin 500ms backwards;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -415,17 +522,11 @@ header .localisation * {
   left: 2em;
   display: flex;
 }
-
-.loader {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #9356DC;
-  animation: fadeout 4s forwards;
-  z-index: 1000;
-  visibility: hidden;
+.menu > header .arrow-left-container i {
+  color: #9356DC;
+}
+.menu > header .arrow-left-container i:active {
+  color: #99E2D0;
 }
 
 .acceuil .localisation {
@@ -535,6 +636,27 @@ button:hover {
     display: none;
   }
 }
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #9356DC;
+  animation: fadeout 1s forwards;
+  z-index: 1000;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader i {
+  color: white;
+  font-size: 50px;
+  opacity: 90%;
+  animation: turn 2s alternate-reverse ease-out infinite;
+}
+
 /*Menu global*/
 .menu {
   padding: 10px 0px;
@@ -558,6 +680,28 @@ button:hover {
 .menu .restau_name-heart i {
   font-size: 30px;
 }
+.menu .restau_name-heart .filled {
+  display: none;
+  background: #CF70C5;
+  background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu .restau_name-heart .border {
+  display: block;
+}
+.menu .restau_name-heart:hover {
+  cursor: pointer;
+}
+.menu .restau_name-heart:hover .filled {
+  display: block;
+  animation: fadein 1s;
+}
+.menu .restau_name-heart:hover .border {
+  display: none;
+}
 
 /* Menu titles */
 .menu-category-title {
@@ -580,12 +724,27 @@ button:hover {
   .menu-page {
     display: flex;
     align-items: center;
-    background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  #aLaFrancaise {
+    background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  }
+
+  #laNoteEnchante {
+    background-image: url(../../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  }
+
+  #leDeliceDesSens {
+    background-image: url(../../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  }
+
+  #laPaletteDuGout {
+    background-image: url(../../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   }
 
   .menu-page > .menu, .menu-carroussel {
@@ -598,29 +757,6 @@ button:hover {
 
   .Fonctionnement h2, .Restaurants h2 {
     text-align: center;
-  }
-
-  .restau_name-heart .filled {
-    display: none;
-    background: #CF70C5;
-    background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-    background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-    background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .restau_name-heart .border {
-    display: block;
-  }
-  .restau_name-heart:hover {
-    cursor: pointer;
-  }
-  .restau_name-heart:hover .filled {
-    display: block;
-    animation: fadein 1s;
-  }
-  .restau_name-heart:hover .border {
-    display: none;
   }
 }
 

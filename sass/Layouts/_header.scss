@@ -39,5 +39,14 @@ header {
        left: 2em;
        display: flex;
 
+       i {
+
+        color: $colour-primary; 
+        
+           &:active {
+               color: $colour-tertiary; 
+           }
+       }
+
     }
 }

@@ -25,6 +25,39 @@
     i {
         font-size: 30px;
     }
+
+
+
+    .filled  {
+            display: none;
+            background: #CF70C5;
+            background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+            background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+            background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+     }
+
+     .border {
+            display: block;
+        }
+        
+
+        &:hover {
+           
+            cursor: pointer;
+            .filled {
+                display: block;
+                animation: fadein 1s; 
+            }
+
+            .border {
+    
+                display: none;
+            }
+        }   
+
+    
     
 }
 
@@ -62,8 +95,9 @@
         .menu-page {
             display: flex;
             align-items: center;
-            background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            // background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
             
+
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -72,6 +106,22 @@
             background-size: cover;
         
 
+        }
+
+        #aLaFrancaise {
+            background-image: url(../../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+        }
+
+        #laNoteEnchante {
+            background-image: url(../../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        }
+
+        #leDeliceDesSens {
+            background-image: url(../../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        }
+
+        #laPaletteDuGout {
+            background-image: url(../../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
         }
 
 
@@ -95,48 +145,8 @@
         
         }
        
-        .restau_name-heart {
-
-            .filled  {
-                display: none;
-                background: #CF70C5;
-                background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-                background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-                background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-    
-            .border {
-                display: block;
-            }
-    
-            &:hover {
-               
-                cursor: pointer;
-                .filled {
-                    display: block;
-                    animation: fadein 1s; 
-                }
-    
-                .border {
-        
-                    display: none;
-                }
-            }   
-
-        }
+   
 
 
-
-    }
-
-    @media (min-width: $lg) {
-
- 
-
-    }
-
-    @media (min-width: $xl) {
 
     }
