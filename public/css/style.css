@@ -209,11 +209,7 @@ button {
 .Restaurants .cards .cards_text-right .filled {
   display: none;
   background: #CF70C5;
-  background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
   background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .Restaurants .cards .cards_text-right .border {
   display: block;
@@ -419,47 +415,6 @@ button {
   text-overflow: ellipsis;
 }
 
-@media (min-width: 768px) {
-  .Fonctionnement {
-    display: grid;
-    grid-template: "title title title" "card1 card2 card3";
-  }
-
-  .Fonctionnement h2 {
-    grid-area: title;
-  }
-  .Fonctionnement .card-1 {
-    grid-area: card1;
-  }
-  .Fonctionnement .card-2 {
-    grid-area: card2;
-  }
-  .Fonctionnement .card-3 {
-    grid-area: card3;
-  }
-
-  .restaurant-card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template: "c1 c2" 1fr 1fr "c3 c4" 1fr 1fr;
-    grid-gap: 1em;
-  }
-  .restaurant-card-container .cards {
-    margin: 1em;
-  }
-  .restaurant-card-container .rcard-1 {
-    grid-area: c1;
-  }
-  .restaurant-card-container .rcard-2 {
-    grid-area: c2;
-  }
-  .restaurant-card-container .rcard-3 {
-    grid-area: c3;
-  }
-  .restaurant-card-container .rcard-4 {
-    grid-area: c4;
-  }
-}
 @media (min-width: 1200px) {
   .restaurant-card-container {
     display: grid;
@@ -685,11 +640,8 @@ button:hover {
 .menu .restau_name-heart .filled {
   display: none;
   background: #CF70C5;
-  background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
   background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .menu .restau_name-heart .border {
   display: block;
@@ -754,7 +706,6 @@ button:hover {
     background-color: rgba(245, 245, 245, 0.701);
     border-radius: 15px;
     margin: 2em 0;
-    backdrop-filter: blur(6px);
   }
 
   .Fonctionnement h2, .Restaurants h2 {
