@@ -170,11 +170,11 @@
                 .filled  {
                     display: none;
                     background: #CF70C5;
-                    background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-                    background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+                    // background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+                    // background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
                     background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
                 }
 
                 .border {
