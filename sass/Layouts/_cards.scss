@@ -167,7 +167,7 @@
 
                
 
-                .filled  {
+               /*  .filled  {
                     display: none;
                     background: #CF70C5;
                     // background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
@@ -192,7 +192,7 @@
             
                         display: none;
                     }
-                }
+                } */
             }
       
         }
@@ -328,16 +328,59 @@
     // Media Querys
 
 
+    @media (min-width: $md) {
 
-    @media (min-width: $xl) {
-       
+        .Fonctionnement {
+
+            .card_wrap {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .card_container {
+                    width: 100%; 
+                }
+            }
+           
+        
+        }
+
+
+        .rcard-1 {
+            grid-area: c1; 
+        }
+
+        .rcard-2 {
+            grid-area: c2; 
+        }
+
+        .rcard-3 {
+            grid-area: c3; 
+        }
+
+        .rcard-4 {
+            grid-area: c4; 
+        }
 
         .restaurant-card-container {
             display: grid; 
-            grid-template: 
-            "c1 c2 c3 c4" 1fr 1fr 1fr 1fr
+            grid-template-areas: 
+            "c1 c2"
+            "c3 c4" 
             ;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px; 
         }    
+        
+    }
+
+    @media (min-width: $xl) {
+       
+        .restaurant-card-container {
+            grid-template-areas: 
+            "c1 c2 c3 c4";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 
 

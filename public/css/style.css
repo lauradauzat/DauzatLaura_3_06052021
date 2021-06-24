@@ -205,21 +205,32 @@ button {
 .Restaurants .cards .cards_text-right {
   padding-right: 1em;
   font-size: xx-large;
-}
-.Restaurants .cards .cards_text-right .filled {
-  display: none;
-  background: #CF70C5;
-  background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-}
-.Restaurants .cards .cards_text-right .border {
-  display: block;
-}
-.Restaurants .cards .cards_text-right:hover .filled {
-  display: block;
-  animation: fadein 1s;
-}
-.Restaurants .cards .cards_text-right:hover .border {
-  display: none;
+  /*  .filled  {
+       display: none;
+       background: #CF70C5;
+       // background: -webkit-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+       // background: -moz-linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+       background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+       // -webkit-background-clip: text;
+       // -webkit-text-fill-color: transparent;
+   }
+
+   .border {
+       display: block;
+   }
+
+   &:hover {
+
+       .filled {
+           display: block;
+           animation: fadein 1s; 
+       }
+
+       .border {
+
+           display: none;
+       }
+   } */
 }
 
 .menu .cards {
@@ -415,10 +426,43 @@ button {
   text-overflow: ellipsis;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+  .Fonctionnement .card_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Fonctionnement .card_wrap .card_container {
+    width: 100%;
+  }
+
+  .rcard-1 {
+    grid-area: c1;
+  }
+
+  .rcard-2 {
+    grid-area: c2;
+  }
+
+  .rcard-3 {
+    grid-area: c3;
+  }
+
+  .rcard-4 {
+    grid-area: c4;
+  }
+
   .restaurant-card-container {
     display: grid;
-    grid-template: "c1 c2 c3 c4" 1fr 1fr 1fr 1fr;
+    grid-template-areas: "c1 c2" "c3 c4";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .restaurant-card-container {
+    grid-template-areas: "c1 c2 c3 c4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 footer {
@@ -614,6 +658,30 @@ button:hover {
   animation: turn 3s alternate-reverse ease-out infinite;
 }
 
+.heart .filled {
+  display: none;
+  background-color: #CF70C5;
+  background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.heart .border {
+  display: block;
+}
+
+.heart-container:hover, .heart:hover {
+  cursor: pointer;
+}
+.heart-container:hover .filled, .heart:hover .filled {
+  display: block;
+  animation: fadein 1s;
+}
+.heart-container:hover .border, .heart:hover .border {
+  display: none;
+}
+
 /*Menu global*/
 .menu {
   padding: 10px 0px;
@@ -639,9 +707,12 @@ button:hover {
 }
 .menu .restau_name-heart .filled {
   display: none;
-  background: #CF70C5;
-  background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+  background-color: #CF70C5;
+  background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 .menu .restau_name-heart .border {
   display: block;
