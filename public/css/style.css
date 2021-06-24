@@ -658,16 +658,14 @@ button:hover {
   animation: turn 3s alternate-reverse ease-out infinite;
 }
 
-.heart .filled {
+.heart .filled, .heart-container .filled {
   display: none;
   background-color: #CF70C5;
-  background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  background-clip: text;
+  background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
 }
-.heart .border {
+.heart .border, .heart-container .border {
   display: block;
 }
 
@@ -701,31 +699,40 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*     .filled  {
+              display: none;
+              background-color: #CF70C5;
+              background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+
+              background-clip: text;
+              -webkit-background-clip: text;
+
+              -webkit-text-fill-color: transparent;
+              -moz-text-fill-color: transparent;
+
+       }
+
+      .border {
+          display: block;
+      }
+
+      .heart-container:hover {
+
+          cursor: pointer;
+          .filled {
+              display: block;
+              animation: fadein 1s; 
+          }
+
+          .border {
+
+              display: none;
+          }
+
+      } */
 }
 .menu .restau_name-heart i {
   font-size: 30px;
-}
-.menu .restau_name-heart .filled {
-  display: none;
-  background-color: #CF70C5;
-  background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-.menu .restau_name-heart .border {
-  display: block;
-}
-.menu .restau_name-heart .heart-container:hover {
-  cursor: pointer;
-}
-.menu .restau_name-heart .heart-container:hover .filled {
-  display: block;
-  animation: fadein 1s;
-}
-.menu .restau_name-heart .heart-container:hover .border {
-  display: none;
 }
 
 /* Menu titles */
@@ -749,7 +756,6 @@ button:hover {
   .menu-page {
     display: flex;
     align-items: center;
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

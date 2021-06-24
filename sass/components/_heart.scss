@@ -1,15 +1,17 @@
-.heart {
+.heart, .heart-container {
 
     .filled  {
         display: none;
         background-color: #CF70C5;
-        background-image: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
+        background: linear-gradient(to right, #CF70C5 0%, #9217CF 100%);
         
-        background-clip: text;
+        // background-clip: text;
         -webkit-background-clip: text;
+    
 
         -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        //-moz-text-fill-color: transparent;
+    
       
     }
 
